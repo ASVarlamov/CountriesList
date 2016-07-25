@@ -5,6 +5,7 @@ package countriesFlags.controller.events
 	public class AppEvent extends Event
 	{
 		public static const SELECT_COUNTRY:String = "SELECT_COUNTRY";
+		public static const COUNTRY_LOADED:String = "COUNTRY_LOADED";
 
 		public var data:Object;
 

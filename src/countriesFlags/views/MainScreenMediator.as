@@ -1,16 +1,18 @@
 package countriesFlags.views
 {
 	import countriesFlags.controller.events.AppEvent;
+	import countriesFlags.core.ScreenNames;
 	import countriesFlags.model.FlagsDataModel;
 
 	import flash.events.IEventDispatcher;
 
 	import robotlegs.starling.bundles.mvcs.Mediator;
 
-	public class WelcomeScreenMediator extends Mediator
+	public class MainScreenMediator extends Mediator
 	{
+
 		[Inject]
-		public var view:WelcomeScreen;
+		public var view:MainScreen;
 
 		[Inject]
 		public var dispatcher:IEventDispatcher;
@@ -22,17 +24,13 @@ package countriesFlags.views
 		{
 			trace("MSM: initialization complete");
 
-			addContextListener(AppEvent.SELECT_COUNTRY, onSelectCountry);
-
-			if (flagsDataModel.currentFlagId)
-			{
-				view.setCountry(flagsDataModel.flagList[flagsDataModel.currentFlagId]);
-			}
+			addContextListener(AppEvent.COUNTRY_LOADED, onCountryLoaded);
 		}
 
-		private function onSelectCountry(event:AppEvent):void
+		private function onCountryLoaded(event:AppEvent):void
 		{
-			view.setCountry(event.data)
+			flagsDataModel.currentFlagId = "CC";
+			view.showScreen(ScreenNames.WELCOME_SCREEN);
 		}
 	}
 }

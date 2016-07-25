@@ -46,7 +46,7 @@ package countriesFlags.service
 
 				flagsModel.flagList = res;
 
-				dispatcher.dispatchEvent(new AppEvent(AppEvent.SELECT_COUNTRY, false, res["CC"]));
+				dispatcher.dispatchEvent(new AppEvent(AppEvent.COUNTRY_LOADED, false));
 			}
 		}
 

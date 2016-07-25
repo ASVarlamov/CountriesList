@@ -5,8 +5,6 @@ package countriesFlags.theme
 
 	import flash.text.TextFormatAlign;
 
-	import flash.text.engine.ElementFormat;
-
 	public class AppTheme extends MetalWorksMobileTheme
 	{
 
@@ -15,14 +13,15 @@ package countriesFlags.theme
 
 		}
 
-		override protected function initialize():void {
-
+		override protected function initialize():void
+		{
 			super.initialize();
 
 			getStyleProviderForClass(Label).defaultStyleFunction = setLabelStyles;
 		}
 
-		private function setLabelStyles(label:Label):void {
+		private function setLabelStyles(label:Label):void
+		{
 			label.padding = 10;
 			label.textRendererProperties.wordWrap = true;
 			label.textRendererProperties.elementFormat = this.lightElementFormat;

@@ -1,6 +1,7 @@
 package
 {
 	import countriesFlags.config.AppContext;
+	import countriesFlags.views.MainScreen;
 
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -41,7 +42,7 @@ package
 
 			Starling.multitouchEnabled = true;
 
-			_starling = new Starling(WelcomeScreen, this.stage);
+			_starling = new Starling(MainScreen, this.stage);
 			_starling.stage3D.addEventListener(Event.CONTEXT3D_CREATE, starlingContextCreateCompleteHandler);
 			_starling.showStatsAt("left", "bottom");
 

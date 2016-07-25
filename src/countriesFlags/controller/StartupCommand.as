@@ -14,8 +14,6 @@ package countriesFlags.controller
 		[Inject]
 		public var flagsService:IFlagsDataService;
 
-
-
 		override public function execute():void
 		{
 			trace("startup complete");

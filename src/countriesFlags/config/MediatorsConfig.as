@@ -1,6 +1,10 @@
 package countriesFlags.config
 {
 
+	import countriesFlags.views.CountrySelectorScreen;
+	import countriesFlags.views.CountrySelectorScreenMediator;
+	import countriesFlags.views.MainScreen;
+	import countriesFlags.views.MainScreenMediator;
 	import countriesFlags.views.WelcomeScreen;
 	import countriesFlags.views.WelcomeScreenMediator;
 
@@ -19,7 +23,9 @@ package countriesFlags.config
 
 		public function configure():void
 		{
+			mediatorMap.map(MainScreen).toMediator(MainScreenMediator);
 			mediatorMap.map(WelcomeScreen).toMediator(WelcomeScreenMediator);
+			mediatorMap.map(CountrySelectorScreen).toMediator(CountrySelectorScreenMediator);
 		}
 	}
 }

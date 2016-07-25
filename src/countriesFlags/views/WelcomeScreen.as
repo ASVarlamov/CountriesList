@@ -21,7 +21,6 @@ package countriesFlags.views
 
 		public function WelcomeScreen()
 		{
-			new AppTheme();
 		}
 
 		override protected function initialize():void
@@ -37,7 +36,6 @@ package countriesFlags.views
 			(_container.layoutData as AnchorLayoutData).verticalCenter = 0;
 			(_container.layoutData as AnchorLayoutData).percentHeight = 100;
 			addChild(_container);
-
 
 			_flagImage = new ImageLoader();
 			_flagImage.layoutData = new AnchorLayoutData();
