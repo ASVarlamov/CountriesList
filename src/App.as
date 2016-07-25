@@ -12,7 +12,7 @@ package
 
 	import starling.core.Starling;
 
-	import countriesFlags.views.MainScreen;
+	import countriesFlags.views.WelcomeScreen;
 
 	[SWF(frameRate="60", backgroundColor="#F2F2F2")]
 	public class App extends Sprite
@@ -41,7 +41,7 @@ package
 
 			Starling.multitouchEnabled = true;
 
-			_starling = new Starling(MainScreen, this.stage);
+			_starling = new Starling(WelcomeScreen, this.stage);
 			_starling.stage3D.addEventListener(Event.CONTEXT3D_CREATE, starlingContextCreateCompleteHandler);
 			_starling.showStatsAt("left", "bottom");
 

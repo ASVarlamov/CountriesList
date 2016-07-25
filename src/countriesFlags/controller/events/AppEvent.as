@@ -4,9 +4,14 @@ package countriesFlags.controller.events
 
 	public class AppEvent extends Event
 	{
+		public static const SELECT_COUNTRY:String = "SELECT_COUNTRY";
+
+		public var data:Object;
+
 		public function AppEvent(type:String, bubbles:Boolean = false, data:Object = null)
 		{
-			super(type, bubbles, data);
+			this.data = data;
+			super(type, bubbles);
 		}
 	}
 }

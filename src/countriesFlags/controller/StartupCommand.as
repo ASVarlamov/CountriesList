@@ -1,5 +1,7 @@
 package countriesFlags.controller
 {
+	import countriesFlags.service.IFlagsDataService;
+
 	import flash.events.IEventDispatcher;
 
 	import robotlegs.bender.bundles.mvcs.Command;
@@ -9,9 +11,16 @@ package countriesFlags.controller
 		[Inject]
 		public var dispatcher:IEventDispatcher;
 
+		[Inject]
+		public var flagsService:IFlagsDataService;
+
+
+
 		override public function execute():void
 		{
-			trace("startup complete")
+			trace("startup complete");
+
+			flagsService.loadflasgs();
 		}
 	}
 }

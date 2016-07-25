@@ -1,8 +1,8 @@
 package countriesFlags.config
 {
 
-	import countriesFlags.views.MainScreen;
-	import countriesFlags.views.MainScreenMediator;
+	import countriesFlags.views.WelcomeScreen;
+	import countriesFlags.views.WelcomeScreenMediator;
 
 	import robotlegs.bender.framework.api.IConfig;
 	import robotlegs.starling.extensions.mediatorMap.api.IMediatorMap;
@@ -19,7 +19,7 @@ package countriesFlags.config
 
 		public function configure():void
 		{
-			mediatorMap.map(MainScreen).toMediator(MainScreenMediator);
+			mediatorMap.map(WelcomeScreen).toMediator(WelcomeScreenMediator);
 		}
 	}
 }
