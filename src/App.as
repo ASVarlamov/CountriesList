@@ -1,7 +1,7 @@
 package
 {
-
 	import countriesFlags.config.AppContext;
+	import countriesFlags.views.MainScreen;
 
 	import flash.display.Sprite;
 	import flash.display.StageAlign;
@@ -13,7 +13,7 @@ package
 
 	import starling.core.Starling;
 
-	import countriesFlags.views.MainScreen;
+	import countriesFlags.views.WelcomeScreen;
 
 	[SWF(frameRate="60", backgroundColor="#F2F2F2")]
 	public class App extends Sprite

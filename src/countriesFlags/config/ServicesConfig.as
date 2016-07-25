@@ -1,5 +1,8 @@
 package countriesFlags.config
 {
+	import countriesFlags.service.FlagsDataService;
+	import countriesFlags.service.IFlagsDataService;
+
 	import robotlegs.bender.framework.api.IConfig;
 	import robotlegs.bender.framework.api.IInjector;
 
@@ -11,7 +14,7 @@ package countriesFlags.config
 
 		public function configure():void
 		{
-
+			injector.map(IFlagsDataService).toSingleton(FlagsDataService);
 		}
 	}
 }
