@@ -1,6 +1,5 @@
 package
 {
-
 	import countriesFlags.config.AppContext;
 
 	import flash.display.Sprite;
