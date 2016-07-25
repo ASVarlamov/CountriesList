@@ -1,7 +1,5 @@
 package countriesFlags.views
 {
-	import countriesFlags.theme.AppTheme;
-
 	import feathers.controls.Button;
 	import feathers.controls.ImageLoader;
 	import feathers.controls.Label;
